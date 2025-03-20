@@ -132,6 +132,25 @@ return {
     end,
   },
 
+  {
+    "ilyachur/cmake4vim",
+  },
+
+  {
+    "gergol/cmake-debugger.nvim",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+    },
+    -- setup using default opts
+    opts = {
+      -- cmake_build_dir = function()
+      --   -- In my config, plugins.cmake4vim sets the vim.g.cmake_build_dir variable.
+      --   require("ilyachur/cmake4vim")
+      --   return vim.g.cmake_build_dir
+      -- end,
+    },
+  },
+
   -- mason.nvim integration
   {
     "jay-babu/mason-nvim-dap.nvim",
